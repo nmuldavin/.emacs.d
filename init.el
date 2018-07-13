@@ -6,8 +6,10 @@
 
 ;; install packages if not already installed
 (defvar my-packages '(better-defaults
-		      projectile
                       doom-themes
+		      projectile
+                      js2-mode
+                      rjsx-mode
 		      ))
 
 (dolist (p my-packages)
@@ -18,6 +20,8 @@
     (add-to-list 'my-packages 'exec-path-from-shell))
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
+
+(load "modes.el")
 
 (load "theme.el")
 
@@ -32,7 +36,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("2af26301bded15f5f9111d3a161b6bfb3f4b93ec34ffa95e42815396da9cb560" "53d1bb57dadafbdebb5fbd1a57c2d53d2b4db617f3e0e05849e78a4f78df3a1b" "4e21fb654406f11ab2a628c47c1cbe53bab645d32f2c807ee2295436f09103c6" default)))
+    ("2a1b4531f353ec68f2afd51b396375ac2547c078d035f51242ba907ad8ca19da" "2af26301bded15f5f9111d3a161b6bfb3f4b93ec34ffa95e42815396da9cb560" "53d1bb57dadafbdebb5fbd1a57c2d53d2b4db617f3e0e05849e78a4f78df3a1b" "4e21fb654406f11ab2a628c47c1cbe53bab645d32f2c807ee2295436f09103c6" default)))
  '(package-selected-packages (quote (exec-path-from-shell projectile better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
