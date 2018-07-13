@@ -15,3 +15,7 @@
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
+
+(add-to-list 'load-path "~/.emacs.d/customizations")
+
+(load "ui.el")
